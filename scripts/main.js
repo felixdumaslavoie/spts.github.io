@@ -15,3 +15,23 @@ function growShrinkLogo() {
    size = 0;
   }
 }
+
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
+delay(3000).then(() => console.log('ran after 1 second1 passed'));
+
+function refreshMain() {
+  var test = 0;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    alert("It works!");
+    growShrinkLogo();
+    test = 1;
+ });
+  ready(function(){
+
+  })
+}
+
