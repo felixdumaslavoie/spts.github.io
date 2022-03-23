@@ -1,11 +1,9 @@
 
 
-var Logo = document.getElementById("logo");
-var endOfDocumentTop = 150;
-var size = 0;
 
-function growShrinkLogo() {
+export const growShrinkLogoScript = (Logo, endOfDocumentTop, size) => {
   let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  console.log("scroll:" + scroll)
 
   if (size == 0 && scroll > endOfDocumentTop) {
     Logo.className = 'smallLogo';
@@ -16,22 +14,5 @@ function growShrinkLogo() {
   }
 }
 
-function delay(time) {
-  return new Promise(resolve => setTimeout(resolve, time));
-}
 
-delay(3000).then(() => console.log('ran after 1 second1 passed'));
-
-function refreshMain() {
-  var test = 0;
-
-  document.addEventListener('DOMContentLoaded', function() {
-    alert("It works!");
-    growShrinkLogo();
-    test = 1;
- });
-  ready(function(){
-
-  })
-}
 
