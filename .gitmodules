@@ -1,3 +1,4 @@
 [submodule "dynamicDataSPTS"]
 	path = dynamicDataSPTS
 	url = https://github.com/felixdumaslavoie/dynamicDataSPTS.git
+	recurse = true
